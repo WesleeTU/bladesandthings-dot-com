@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #2c5476;
+  --background-color: #f6f6f6;
+  --weight-normal: 400;
+  --weight-bold: 700;
+  --animation-speed: 0.8s;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+html,
+body {
+  background-color: var(--background-color);;
+  font-family: 'Averia Serif Libre', serif;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: var(--weight-bold);
+  text-align: center;
+  opacity: 0;
+  animation-name: slide-up;
+  animation-duration: var(--animation-speed);
+  animation-fill-mode: forwards;
+}
+
+strong {
+  font-weight: var(--weight-bold);
+}
+
+.min-100vh {
+  min-height: 100vh;
+}
+
+.sub-title {
+  font-size: 30px;
+  margin-top: 40px;
+  opacity: 0;
+  animation-name: slide-up;
+  animation-duration: var(--animation-speed);
+  animation-fill-mode: forwards;
+}
